@@ -27,16 +27,24 @@ app.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
             when('/', {
-                templateUrl: 'home.html',
+                templateUrl: 'home',
                 controller: 'HomeController'
             }).
             when('/menu', {
-                templateUrl: 'menu.html',
+                templateUrl: 'menu',
                 controller: 'HomeController'
             }).
             when('/typography', {
-                templateUrl: 'typography.html',
+                templateUrl: 'typography',
                 controller: 'HomeController'
+            }).
+            when('/app_sales', {
+                templateUrl: 'app_sales/about',
+                controller: 'AppSalesController'
+            }).
+            when('/app_sales/content', {
+                templateUrl: 'app_sales/content',
+                controller: 'AppSalesController'
             }).
             otherwise({
                 redirectTo: '/'
