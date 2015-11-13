@@ -1,0 +1,28 @@
+body{
+    padding-bottom: 0px;
+    font-family: 'Open Sans', Arial;
+    color:#353636;
+    background: #ededed;
+    font-size: 15px;
+}
+
+.primary, strong, h2{
+    color:#3b5a76;
+}
+
+.container-main{
+    background: #fff;
+    margin-top: 80px;
+    padding: 0 30px 30px 30px;
+}
+
+.profile-img{
+    width: 160px;
+    display: block;
+    margin: auto;
+    margin-top: -80px;
+}
+.media{
+    background-color: darkgray;
+    padding: 10px;
+}

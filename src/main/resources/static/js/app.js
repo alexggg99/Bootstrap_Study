@@ -46,6 +46,14 @@ app.config(['$routeProvider',
                 templateUrl: 'app_sales/content',
                 controller: 'AppSalesController'
             }).
+            when('/app_resume', {
+                templateUrl: 'app_resume/home',
+                controller: 'AppSalesController'
+            }).
+            when('/social_net_app', {
+                templateUrl: 'social_net_app/index',
+                controller: 'AppSocialNetController'
+            }).
             otherwise({
                 redirectTo: '/'
             });
