@@ -54,6 +54,18 @@ app.config(['$routeProvider',
                 templateUrl: 'social_net_app/index',
                 controller: 'AppSocialNetController'
             }).
+            when('/social_net_app/members', {
+                templateUrl: 'social_net_app/members',
+                controller: 'AppSocialNetController'
+            }).
+            when('/social_net_app/profile', {
+                templateUrl: 'social_net_app/profile',
+                controller: 'AppSocialNetController'
+            }).
+            when('/social_net_app/photos', {
+                templateUrl: 'social_net_app/photos',
+                controller: 'AppSocialNetController'
+            }).
             otherwise({
                 redirectTo: '/'
             });
