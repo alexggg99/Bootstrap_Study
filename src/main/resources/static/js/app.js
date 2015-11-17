@@ -66,6 +66,10 @@ app.config(['$routeProvider',
                 templateUrl: 'social_net_app/photos',
                 controller: 'AppSocialNetController'
             }).
+        when('/agency_app', {
+            templateUrl: 'agency_app/index',
+            controller: 'AppAgencyController'
+        }).
             otherwise({
                 redirectTo: '/'
             });
