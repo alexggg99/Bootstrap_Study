@@ -70,6 +70,10 @@ app.config(['$routeProvider',
             templateUrl: 'agency_app/index',
             controller: 'AppAgencyController'
         }).
+            when('/photo_gallery_app', {
+                templateUrl: 'photo_gallery_app/index',
+                controller: 'AppPhotoGalleryController'
+            }).
             otherwise({
                 redirectTo: '/'
             });
