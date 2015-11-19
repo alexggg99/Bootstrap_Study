@@ -75,11 +75,15 @@ app.config(['$routeProvider',
                 controller: 'AppPhotoGalleryController'
             }).
             when('/cms_app', {
+                templateUrl: 'cms_app/main',
+                controller: 'AppCMSController'
+            }).
+            when('/cms_app/login', {
                 templateUrl: 'cms_app/login',
                 controller: 'AppCMSController'
             }).
-            when('/cms_app', {
-                templateUrl: 'cms_app/index',
+            when('/cms_app/resource', {
+                templateUrl: 'cms_app/resource',
                 controller: 'AppCMSController'
             }).
             otherwise({
