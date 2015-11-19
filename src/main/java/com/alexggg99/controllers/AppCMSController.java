@@ -16,7 +16,6 @@ public class AppCMSController {
         return "projects/cms_app/login";
     }
 
-    @RequestMapping(value = "/index")
     public String content(){
         return "projects/cms_app/index";
     }

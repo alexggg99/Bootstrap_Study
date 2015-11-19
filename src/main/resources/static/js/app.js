@@ -78,7 +78,7 @@ app.config(['$routeProvider',
                 templateUrl: 'cms_app/login',
                 controller: 'AppCMSController'
             }).
-            when('/cms_app/index', {
+            when('/cms_app', {
                 templateUrl: 'cms_app/index',
                 controller: 'AppCMSController'
             }).
