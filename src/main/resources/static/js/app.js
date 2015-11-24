@@ -24,7 +24,7 @@ var app = angular.module('myApp', ['ngRoute']);
 
 //Define Routing for app
 app.config(['$routeProvider',
-    function($routeProvider) {
+    function($routeProvider, $httpProvider) {
         $routeProvider.
             when('/', {
                 templateUrl: 'home',
@@ -89,5 +89,6 @@ app.config(['$routeProvider',
             otherwise({
                 redirectTo: '/'
             });
+        $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
     }]);
 

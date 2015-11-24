@@ -9,11 +9,11 @@ app.controller('AppCMSController', function($rootScope, $scope, $location, $http
     //    $scope.greeting = data;
     //})
 
-    $scope.login = function(){
-        var username = $scope.username;
-        var password = $scope.password;
-        $location.path('/cms_app/index');
-    }
+    //$scope.login = function(){
+    //    var username = $scope.username;
+    //    var password = $scope.password;
+    //    $location.path('/cms_app/index');
+    //}
 
 
     var authenticate = function(credentials, callback) {
@@ -50,5 +50,13 @@ app.controller('AppCMSController', function($rootScope, $scope, $location, $http
         });
     };
 
+    $scope.logout = function() {
+        $http.post('logout', {}).success(function () {
+            $rootScope.authenticated = false;
+            $location.path("/cms_app");
+        }).error(function (data) {
+            $rootScope.authenticated = false;
+        });
+    }
 
 });
