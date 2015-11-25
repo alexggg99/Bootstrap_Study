@@ -59,4 +59,11 @@ app.controller('AppCMSController', function($rootScope, $scope, $location, $http
         });
     }
 
+    $scope.checkSession = function(){
+        $http.post('cms_app/checkSession').success(function(){
+            $rootScope.authenticated = true;
+            console.log($rootScope.authenticated);
+        })
+    }
+
 });

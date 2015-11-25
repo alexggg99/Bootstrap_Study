@@ -44,4 +44,10 @@ public class AppCMSController {
         return user;
     }
 
+    @RequestMapping("/checkSession")
+    @ResponseBody
+    public String checkSession(){
+        return "{\"session\":\"343434\"}";
+    }
+
 }

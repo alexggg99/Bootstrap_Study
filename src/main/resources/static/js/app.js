@@ -36,7 +36,7 @@ app.config(['$routeProvider',
             }).
             when('/typography', {
                 templateUrl: 'typography',
-                controller: 'HomeController'
+                controller: 'HomeControUnauthorizedller'
             }).
             when('/app_sales', {
                 templateUrl: 'app_sales/about',
@@ -89,6 +89,5 @@ app.config(['$routeProvider',
             otherwise({
                 redirectTo: '/'
             });
-        $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
     }]);
 
