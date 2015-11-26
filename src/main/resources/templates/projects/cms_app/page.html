@@ -1,0 +1,123 @@
+<link href="css/bootstrap.min.cerulean.css" rel="stylesheet" media="screen"/>
+<link href="css/cms_main.css" rel="stylesheet" media="screen"/>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Alpha CMS</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#/cms_app">Main</a></li>
+                <li class="active"><a href="#/cms_app/pages">Pages</a></li>
+                <li><a href="">Categories</a></li>
+                <li><a href="">Users</a></li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input id="searchbox" ng-model="searchbox" type="text" class="form-control" placeholder="Search"/>
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Account <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Profile</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+
+<section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+                <div class="list-group">
+                    <a href="#/cms_app" class="list-group-item">
+                        <i class="glyphicon glyphicon-dashboard"></i> Dashboard
+                    </a>
+                    <a class="active list-group-item" href="#/cms_app/pages"><i class="glyphicon glyphicon-file"></i>
+                        Pages</a>
+                    <a href="" class="list-group-item">Categories</a>
+                    <a href="" class="list-group-item">Users</a>
+                </div>
+
+
+            </div>
+            <div class="col-md-8">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="table-view"><i class="glyphicon glyphicon-file"></i> Add Pages</h1>
+                    </div>
+                </div>
+
+                <ol class="breadcrumb">
+                    <li><a href="#/cms_app">Dashboard</a></li>
+                    <li><a href="#/cms_app/pages">Pages</a></li>
+                    <li class="active">Page</li>
+                </ol>
+
+
+                <form data-ng-controller="AppCMSController">
+                    <div class="form-group">
+                        <label for="inputPageTitle">Page title</label>
+                        <input type="text" class="form-control" data-ng-model="page.title" id="inputPageTitle" placeholder="Page Title"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPageCategory">Category </label>
+                        <select id="inputPageCategory">
+                            <option value="1">Category 1</option>
+                            <option value="2">Category 2</option>
+                            <option value="3">Category 3</option>
+                            <option value="4">Category 4</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPageAuthor">Page Author</label>
+                        <input type="text"  data-ng-model="page.Author" class="form-control" id="inputPageAuthor" placeholder="Page Author"/>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-ng-click="click123()">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<div class="container">
+    <div class="row" id="preFooter"></div>
+</div>
+
+<footer class="footer">
+    <p>Copyright 2015, All rights</p>
+</footer>
+
+
+<script src="css/libs/__jquery.tablesorter/jquery.tablesorter.js "></script>
+
+
+
+
+

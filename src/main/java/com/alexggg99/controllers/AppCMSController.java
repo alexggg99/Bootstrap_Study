@@ -37,6 +37,16 @@ public class AppCMSController {
         return "projects/cms_app/login";
     }
 
+    @RequestMapping(value = "/pages")
+    public String pages(){
+        return "projects/cms_app/pages";
+    }
+
+    @RequestMapping(value = "/page")
+    public String page(){
+        return "projects/cms_app/page";
+    }
+
     @RequestMapping("/user")
     @ResponseBody
     public Principal user(Principal user) {

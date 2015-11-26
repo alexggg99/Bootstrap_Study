@@ -82,6 +82,14 @@ app.config(['$routeProvider',
                 templateUrl: 'cms_app/login',
                 controller: 'AppCMSController'
             }).
+            when('/cms_app/pages', {
+                templateUrl: 'cms_app/pages',
+                controller: 'AppCMSController'
+            }).
+            when('/cms_app/page', {
+                templateUrl: 'cms_app/page',
+                controller: 'AppCMSController'
+            }).
             when('/cms_app/resource', {
                 templateUrl: 'cms_app/resource',
                 controller: 'AppCMSController'

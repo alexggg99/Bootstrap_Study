@@ -1,0 +1,29 @@
+.navbar .navbar-default{
+  border-radius: 0;
+}
+
+#preFooter{
+  height: 80px;
+}
+
+footer{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: #1f87c2 !important;
+  color: white;
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+}
+
+.actions{
+  float: right;
+  margin-top: 25px;
+}
+
+.tablesorter .sortable{
+  cursor: pointer;
+}
+
