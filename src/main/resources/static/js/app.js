@@ -94,6 +94,10 @@ app.config(['$routeProvider',
                 templateUrl: 'cms_app/resource',
                 controller: 'AppCMSController'
             }).
+            when('/web_hosting_app', {
+                templateUrl: 'web_hosting_app/index',
+                controller: 'WebHostingAppController'
+            }).
             otherwise({
                 redirectTo: '/'
             });

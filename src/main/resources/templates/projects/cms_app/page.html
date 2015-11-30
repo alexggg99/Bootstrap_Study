@@ -79,6 +79,7 @@
 
 
                 <form data-ng-controller="AppCMSController">
+                    {{page}}
                     <div class="form-group">
                         <label for="inputPageTitle">Page title</label>
                         <input type="text" class="form-control" data-ng-model="page.title" id="inputPageTitle" placeholder="Page Title"/>
@@ -98,7 +99,6 @@
                     </div>
                     <button type="submit" class="btn btn-primary" data-ng-click="click123()">Submit</button>
                 </form>
-
             </div>
         </div>
     </div>

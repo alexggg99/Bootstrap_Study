@@ -1,0 +1,17 @@
+
+#preFooter{
+    height: 80px;
+}
+
+footer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: black;
+    position: relative;
+    /*background-color: #e7e7e7;*/
+    margin-top: -150px; /* negative value of footer height */
+    height: 150px;
+    clear:both;
+}
+

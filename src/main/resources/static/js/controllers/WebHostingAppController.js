@@ -3,7 +3,7 @@
  */
 
 
-app.controller('AppCMSController', function($rootScope, $scope, $location, $http) {
+app.controller('WebHostingAppController', function($rootScope, $scope, $location, $http) {
 
     $scope.json =
         [{"id":1, "title":"Page One", "Category":"Category One", "Author":"Author One"},
