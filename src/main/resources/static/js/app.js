@@ -86,13 +86,9 @@ app.config(['$routeProvider',
                 templateUrl: 'cms_app/pages',
                 controller: 'AppCMSController'
             }).
-            when('/cms_app/page', {
+            when('/cms_app/page/:pageId', {
                 templateUrl: 'cms_app/page',
-                controller: 'AppCMSController'
-            }).
-            when('/cms_app/resource', {
-                templateUrl: 'cms_app/resource',
-                controller: 'AppCMSController'
+                controller: 'AppCMSPageController'
             }).
             when('/web_hosting_app', {
                 templateUrl: 'web_hosting_app/index',

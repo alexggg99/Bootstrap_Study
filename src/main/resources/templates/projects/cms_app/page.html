@@ -67,7 +67,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="table-view"><i class="glyphicon glyphicon-file"></i> Add Pages</h1>
+                        <h1 class="table-view"><i class="glyphicon glyphicon-file"></i> Edit Pages</h1>
                     </div>
                 </div>
 
@@ -78,26 +78,24 @@
                 </ol>
 
 
-                <form data-ng-controller="AppCMSController">
-                    {{page}}
+                <form>
+                <pre>{{page | json}}</pre>
+
                     <div class="form-group">
                         <label for="inputPageTitle">Page title</label>
                         <input type="text" class="form-control" data-ng-model="page.title" id="inputPageTitle" placeholder="Page Title"/>
                     </div>
                     <div class="form-group">
-                        <label for="inputPageCategory">Category </label>
-                        <select id="inputPageCategory">
-                            <option value="1">Category 1</option>
-                            <option value="2">Category 2</option>
-                            <option value="3">Category 3</option>
-                            <option value="4">Category 4</option>
+                        <label for="pageCategory">Category </label>
+                        <select ng-model="page.category" id="pageCategory"  ng-options="category.name for category in categories track by category.id">
+                            <option value="">Nothing selected</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="inputPageAuthor">Page Author</label>
-                        <input type="text"  data-ng-model="page.Author" class="form-control" id="inputPageAuthor" placeholder="Page Author"/>
+                        <input type="text"  data-ng-model="page.author" class="form-control" id="inputPageAuthor" placeholder="Page Author"/>
                     </div>
-                    <button type="submit" class="btn btn-primary" data-ng-click="click123()">Submit</button>
+                    <button type="submit" class="btn btn-primary" data-ng-click="savePage()">Submit</button>
                 </form>
             </div>
         </div>

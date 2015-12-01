@@ -3,7 +3,7 @@
  */
 
 
-app.controller('AppCMSController', function($rootScope, $scope, $location, $http) {
+app.controller('AppCMSController', function($rootScope, $scope, $location, $http, $routeParams, pageService) {
 
     $scope.json =
         [{"id":1, "title":"Page One", "Category":"Category One", "Author":"Author One"},
@@ -88,7 +88,7 @@ app.controller('AppCMSController', function($rootScope, $scope, $location, $http
     };
 
     $scope.page = {};
-    $scope.pageId = 1;
+    $scope.pageId = $routeParams.pageId;;
 
     $scope.getPage = function (page) {
         $scope.create = false;
@@ -97,8 +97,11 @@ app.controller('AppCMSController', function($rootScope, $scope, $location, $http
     };
 
 
-    $scope.click123 = function () {
-        console.log($scope.page)
+    $scope.pages;
+    $scope.loadRemoteData = function () {
+        pageService.getAllPages().then(function(responce){
+            $scope.pages = responce;
+        })
     };
 
 });

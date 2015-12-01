@@ -71,7 +71,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="btn-group actions" role="group" aria-label="...">
-                            <a href="#/cms_app/page" class="btn btn-default">New</a>
+                            <a href="#/cms_app/page/-1" class="btn btn-default">New</a>
                             <a href="" class="btn btn-default">Edit</a>
                             <a href="" class="btn btn-default">Delete</a>
                         </div>
@@ -85,7 +85,7 @@
 
                 <h3>Latest pages</h3>
 
-                <table class="table table-striped tablesorter" id="sort-table">
+                <table class="table table-striped tablesorter" id="sort-table" ng-init="loadRemoteData()">
                     <thead>
                         <tr>
                             <th><input id="selectAll" type="checkbox"/></th>
@@ -95,13 +95,13 @@
                             <th>Author</th>
                         </tr>
                     </thead>
-                    <tbody data-ng-repeat="record in json | filter:searchbox">
+                    <tbody data-ng-repeat="record in pages | filter:searchbox">
                         <tr>
                             <td><input type="checkbox"/></td>
                             <td>{{record.id}}</td>
-                            <td><a  ng-click="getPage(record)">{{record.title}}</a></td>
-                            <td>{{record.Category}}</td>
-                            <td>{{record.Author}}</td>
+                            <td><a ng-href="#/cms_app/page/{{record.id}}">{{record.title}}</a></td>
+                            <td>{{record.category.name}}</td>
+                            <td>{{record.author}}</td>
                         </tr>
                     </tbody>
                 </table>
