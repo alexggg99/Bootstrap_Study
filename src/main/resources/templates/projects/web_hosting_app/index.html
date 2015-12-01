@@ -2,326 +2,280 @@
 <link href="css/web_hosting_app.css" rel="stylesheet" media="screen"/>
 
 <!--<div class="navbar-wrapper">-->
-    <!--<div class="container">-->
+<!--<div class="container">-->
 
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Project name</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Web hosting project</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#/web_hosting_app">Home</a></li>
+                <li><a href="#/web_hosting_app/domain">Domain</a></li>
+                <li ><a href="#/web_hosting_app/contact">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="" data-ng-click="toggleLoginDiv()">Login</a></li>
+                <li><a href="">Register</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-2">
+            <div id="loginDiv" class="well hidden">
+                <div class="row">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control"  placeholder="Email"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Password</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control" placeholder="Password"/>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="panel-footer">
+                            <button type="button" data-ng-click="toggleLoginDiv()" class="btn btn-default">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
+        </div>
+    </div>
+</div>
 
-    <!--</div>-->
-<!--</div>-->
 
-
-<!-- Carousel
-================================================== -->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<!-- Carousel ================================================== -->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
     </ol>
+
+    <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide"/>
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>Example headline.</h1>
-                    <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                    <h1>Hosting # 1 in the World</h1>
+
+                    <p>Prepare your domain for the move
+                        Request an authorization code from your current provider
+                        and make sure that you have access to the specified e-mail address.</p>
+
                     <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
                 </div>
             </div>
         </div>
         <div class="item">
-            <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide"/>
+            <!--<img class="second-slide" src="" alt="Second slide"/>-->
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Another example headline.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                    <p>
+                        <ul class="feature-list">
+                            <li><i class="fa fa-check"></i> Unlimited disk space</li>
+                            <li><i class="fa fa-check"></i> FREE Domain</li>
+                            <li><i class="fa fa-check"></i> FREE SECURITY SUITE</li>
+                            <li><i class="fa fa-check"></i> FREE Site Building</li>
+                            <li><i class="fa fa-check"></i> FREE Admin Engine</li>
+                        </ul>
+                    </p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
                 </div>
             </div>
         </div>
         <div class="item">
-            <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide"/>
+            <!--<img class="third-slide" src="" alt="Third slide"/>-->
             <div class="container">
                 <div class="carousel-caption">
                     <h1>One more for good measure.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida
+                        at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
                     <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
                 </div>
             </div>
         </div>
     </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+
+    <!-- Controls -->
+    <a class="left carousel-control" data-target="#carousel-example-generic" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <a class="right carousel-control" data-target="#carousel-example-generic" role="button" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
-</div><!-- /.carousel -->
+</div>
 
 
 <!-- Marketing messaging and featurettes
 ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->
 
-<div class="container marketing">
-
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-        <div class="col-lg-4">
-            <!--<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"/>-->
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-            <!--<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"/>-->
-            <h2>Heading</h2>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-            <!--<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"/>-->
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-
-
-    <!-- START THE FEATURETTES -->
-
-    <hr class="featurette-divider"/>
-
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image"/>
+<section class="marketing">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <i class="fa fa-user fa-5x fa-border"></i>
+                <h2>24/7 Hour support</h2>
+                <p>Trembling so violently that he had to lean on the balustrade for support, he told me.
+                    Rough and trying times are coming, love, and I must have your support.</p>
+                <p><a class="btn btn-default" href="">View details</a></p>
+            </div>
+            <div class="col-md-4">
+                <i class="fa fa-wordpress fa-5x fa-border"></i>
+                <h2>One Click installation</h2>
+                <p>Trembling so violently that he had to lean on the balustrade for support, he told me.
+                    Rough and trying times are coming, love, and I must have your support.</p>
+                <p><a class="btn btn-default" href="">View details</a></p>
+            </div>
+            <div class="col-md-4">
+                <i class="fa fa-bitbucket fa-5x fa-border"></i>
+                <h2>Daily Backups</h2>
+                <p>Trembling so violently that he had to lean on the balustrade for support, he told me.
+                    Rough and trying times are coming, love, and I must have your support.</p>
+                <p><a class="btn btn-default" href="">View details</a></p>
+            </div>
         </div>
     </div>
+</section>
 
-    <hr class="featurette-divider"/>
 
-    <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
-            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5 col-md-pull-7">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image"/>
+<section class="marketing">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="panel price penal-gray">
+                    <div class="panel-heading arrow_box text-center">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <p class="lead" style="font-size:40px">
+                            <strong>$3.99 / month</strong>
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush text-center">
+                        <li class="list-group-item">1 FREE DOMAIN</li>
+                        <li class="list-group-item">1 GB SPACE</li>
+                        <li class="list-group-item">1 GB BANDWITH</li>
+                        <li class="list-group-item">1 FREE EMAIL</li>
+                    </ul>
+                    <div class="panel-footer">
+                        <a class="btn btn-lg btn-block btn-primary">
+                            Buy now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="panel price penal-gray">
+                    <div class="panel-heading arrow_box text-center">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <p class="lead" style="font-size:40px">
+                            <strong>$3.99 / month</strong>
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush text-center">
+                        <li class="list-group-item">1 FREE DOMAIN</li>
+                        <li class="list-group-item">1 GB SPACE</li>
+                        <li class="list-group-item">1 GB BANDWITH</li>
+                        <li class="list-group-item">1 FREE EMAIL</li>
+                    </ul>
+                    <div class="panel-footer">
+                        <a class="btn btn-lg btn-block btn-primary">
+                            Buy now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="panel price penal-gray">
+                    <div class="panel-heading arrow_box text-center">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <p class="lead" style="font-size:40px">
+                            <strong>$3.99 / month</strong>
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush text-center">
+                        <li class="list-group-item">1 FREE DOMAIN</li>
+                        <li class="list-group-item">1 GB SPACE</li>
+                        <li class="list-group-item">1 GB BANDWITH</li>
+                        <li class="list-group-item">1 FREE EMAIL</li>
+                    </ul>
+                    <div class="panel-footer">
+                        <a class="btn btn-lg btn-block btn-primary">
+                            Buy now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="panel price penal-gray">
+                    <div class="panel-heading arrow_box text-center">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <p class="lead" style="font-size:40px">
+                            <strong>$3.99 / month</strong>
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush text-center">
+                        <li class="list-group-item">1 FREE DOMAIN</li>
+                        <li class="list-group-item">1 GB SPACE</li>
+                        <li class="list-group-item">1 GB BANDWITH</li>
+                        <li class="list-group-item">1 FREE EMAIL</li>
+                    </ul>
+                    <div class="panel-footer">
+                        <a class="btn btn-lg btn-block btn-primary">
+                            Buy now
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+</section>
 
-    <hr class="featurette-divider"/>
 
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image"/>
-        </div>
+<div class="container">
+    <div class="row" id="preFooter"></div>
+</div>
+
+<footer class="footer navbar-default">
+    <div class="container">
+        <p class="pull-right">Copyright 2015, All rights</p>
+        <p>Web hosting project &copy; 2015. &middot;<a href="">Privacy</a> &middot;<a href="">Terms</a></p>
     </div>
-
-    <hr class="featurette-divider"/>
-
-    <!-- /END THE FEATURETTES -->
-
-
-    <!-- FOOTER -->
-    <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2015 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-    </footer>
-
-</div><!-- /.container -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--<nav role="navigation" class="navbar navbar-inverse navbar-static-top">-->
-    <!--<div class="navbar-header">-->
-        <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">-->
-            <!--<span class="sr-only">Toggle navigation</span>-->
-            <!--<span class="icon-bar"></span>-->
-            <!--<span class="icon-bar"></span>-->
-            <!--<span class="icon-bar"></span>-->
-        <!--</button>-->
-        <!--<a class="navbar-brand" rel="home" href="/" title="Aahan Krish's Blog - Homepage">Web Hosting</a>-->
-    <!--</div>-->
-
-    <!--<div class="collapse navbar-collapse navbar-ex1-collapse">-->
-        <!--<ul class="nav navbar-nav">-->
-            <!--<li class="active"><a href="">Home</a></li>-->
-            <!--<li><a href="web_hosting_app/domian">Domains</a></li>-->
-            <!--<li><a href="web_hosting_app/contact">Contact</a></li>-->
-        <!--</ul>-->
-        <!--&lt;!&ndash;<div class="col-sm-2 col-md-2 pull-right">&ndash;&gt;-->
-        <!--&lt;!&ndash;<form class="navbar-form" role="search">&ndash;&gt;-->
-        <!--&lt;!&ndash;<div class="input-group">&ndash;&gt;-->
-        <!--&lt;!&ndash;<input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term"/>&ndash;&gt;-->
-        <!--&lt;!&ndash;<div class="input-group-btn">&ndash;&gt;-->
-        <!--&lt;!&ndash;<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>&ndash;&gt;-->
-        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-        <!--&lt;!&ndash;</form>&ndash;&gt;-->
-        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--</div>-->
-<!--</nav>-->
-
-<!--<section>-->
-
-    <!--&lt;!&ndash;<div class="col-md-12">&ndash;&gt;-->
-        <!--<script>-->
-            <!--$('.carousel').carousel({-->
-                <!--interval: 2000-->
-            <!--})-->
-        <!--</script>-->
-        <!--&lt;!&ndash; Carousel-->
-    <!--================================================== &ndash;&gt;-->
-        <!--<div id="myCarousel" class="carousel slide" data-ride="carousel">-->
-            <!--&lt;!&ndash; Indicators &ndash;&gt;-->
-            <!--<ol class="carousel-indicators">-->
-                <!--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>-->
-                <!--<li data-target="#myCarousel" data-slide-to="1"></li>-->
-                <!--<li data-target="#myCarousel" data-slide-to="2"></li>-->
-            <!--</ol>-->
-            <!--<div class="carousel-inner" role="listbox">-->
-                <!--<div class="item active">-->
-                    <!--<img class="first-slide pull-right" src="img/sever2.jpg" alt="First slide"/>-->
-                    <!--<div class="container">-->
-                        <!--<div class="carousel-caption">-->
-                            <!--<h1>Example headline.</h1>-->
-                            <!--<p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>-->
-                            <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="item">-->
-                    <!--<img class="second-slide" src="img/sever2.jpg" alt="Second slide"/>-->
-                    <!--<div class="container">-->
-                        <!--<div class="carousel-caption">-->
-                            <!--<h1>Another example headline.</h1>-->
-                            <!--<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>-->
-                            <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="item">-->
-                    <!--<img class="third-slide" src="img/sever2.jpg" alt="Third slide"/>-->
-                    <!--<div class="container">-->
-                        <!--<div class="carousel-caption">-->
-                            <!--<h1>One more for good measure.</h1>-->
-                            <!--<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>-->
-                            <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">-->
-                <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
-                <!--<span class="sr-only">Previous</span>-->
-            <!--</a>-->
-            <!--<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">-->
-                <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
-                <!--<span class="sr-only">Next</span>-->
-            <!--</a>-->
-        <!--</div>&lt;!&ndash; /.carousel &ndash;&gt;-->
-
-        <!--&lt;!&ndash;<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">&ndash;&gt;-->
-            <!--&lt;!&ndash;&lt;!&ndash; Indicators &ndash;&gt;&ndash;&gt;-->
-            <!--&lt;!&ndash;<ol class="carousel-indicators">&ndash;&gt;-->
-                <!--&lt;!&ndash;<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>&ndash;&gt;-->
-                <!--&lt;!&ndash;<li data-target="#carousel-example-generic" data-slide-to="1"></li>&ndash;&gt;-->
-                <!--&lt;!&ndash;<li data-target="#carousel-example-generic" data-slide-to="2"></li>&ndash;&gt;-->
-            <!--&lt;!&ndash;</ol>&ndash;&gt;-->
-
-            <!--&lt;!&ndash;&lt;!&ndash; Wrapper for slides &ndash;&gt;&ndash;&gt;-->
-            <!--&lt;!&ndash;<div class="carousel-inner" role="listbox">&ndash;&gt;-->
-                <!--&lt;!&ndash;<div class="item active">&ndash;&gt;-->
-                        <!--&lt;!&ndash;testcxcxbckxbzckjxzbcjkxzbcjzk&ndash;&gt;-->
-                        <!--&lt;!&ndash;<img class="pull-right" src="img/sever2.jpg"/>&ndash;&gt;-->
-                <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                <!--&lt;!&ndash;<div class="item">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<img class="pull-right"  src="img/sever2.jpg"/>&ndash;&gt;-->
-                <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                <!--&lt;!&ndash;<div class="item">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<img class="pull-right"  src="img/sever2.jpg"/>&ndash;&gt;-->
-                <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-
-            <!--&lt;!&ndash;&lt;!&ndash; Controls &ndash;&gt;&ndash;&gt;-->
-            <!--&lt;!&ndash;<a class="left carousel-control" data-target="#carousel-example-generic" role="button" data-slide="prev">&ndash;&gt;-->
-                <!--&lt;!&ndash;<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>&ndash;&gt;-->
-                <!--&lt;!&ndash;<span class="sr-only">Previous</span>&ndash;&gt;-->
-            <!--&lt;!&ndash;</a>&ndash;&gt;-->
-            <!--&lt;!&ndash;<a class="right carousel-control" data-target="#carousel-example-generic" role="button" data-slide="next">&ndash;&gt;-->
-                <!--&lt;!&ndash;<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>&ndash;&gt;-->
-                <!--&lt;!&ndash;<span class="sr-only">Next</span>&ndash;&gt;-->
-            <!--&lt;!&ndash;</a>&ndash;&gt;-->
-        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-
-
-<!--</section>-->
-
-<!--<div class="container">-->
-    <!--<div class="row" id="preFooter"></div>-->
-<!--</div>-->
-
-<!--<footer class="footer navbar-default">-->
-    <!--<p>Copyright 2015, All rights</p>-->
-<!--</footer>-->
+</footer>

@@ -1,4 +1,4 @@
-package com.alexggg99.controllers;
+package com.alexggg99.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,9 +16,14 @@ public class WebHostingAppController {
         return "projects/web_hosting_app/index";
     }
 
-    @RequestMapping(value = "/content")
-    public String content(){
-        return "projects/app_sales/content";
+    @RequestMapping(value = "/domain")
+    public String domain(){
+        return "projects/web_hosting_app/domain";
+    }
+
+    @RequestMapping(value = "/contact")
+    public String contact(){
+        return "projects/web_hosting_app/contact";
     }
 
 }

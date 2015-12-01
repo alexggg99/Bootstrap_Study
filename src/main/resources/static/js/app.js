@@ -24,7 +24,7 @@ var app = angular.module('myApp', ['ngRoute']);
 
 //Define Routing for app
 app.config(['$routeProvider',
-    function($routeProvider, $httpProvider) {
+    function($routeProvider) {
         $routeProvider.
             when('/', {
                 templateUrl: 'home',
@@ -36,7 +36,7 @@ app.config(['$routeProvider',
             }).
             when('/typography', {
                 templateUrl: 'typography',
-                controller: 'HomeControUnauthorizedller'
+                controller: 'HomeController'
             }).
             when('/app_sales', {
                 templateUrl: 'app_sales/about',
@@ -92,6 +92,14 @@ app.config(['$routeProvider',
             }).
             when('/web_hosting_app', {
                 templateUrl: 'web_hosting_app/index',
+                controller: 'WebHostingAppController'
+            }).
+            when('/web_hosting_app/domain', {
+                templateUrl: 'web_hosting_app/domain',
+                controller: 'WebHostingAppController'
+            }).
+            when('/web_hosting_app/contact', {
+                templateUrl: 'web_hosting_app/contact',
                 controller: 'WebHostingAppController'
             }).
             otherwise({

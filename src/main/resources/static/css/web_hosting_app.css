@@ -3,6 +3,10 @@
     margin-bottom: 0;
 }
 
+.dropdown-menu li a{
+    font-size: 18px;
+}
+
 #preFooter{
     height: 80px;
 }
@@ -28,6 +32,10 @@ footer{
 body {
     padding-bottom: 40px;
     color: #5a5a5a;
+}
+
+section{
+    margin: 30px;
 }
 
 
@@ -68,6 +76,10 @@ body {
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
     z-index: 10;
+    text-align: left;
+    top:70px;
+    left: 15%;
+    font-size: 20px;
 }
 
 /* Declare heights because of positioning of img element */
@@ -88,18 +100,24 @@ body {
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-    margin-bottom: 20px;
+.marketing {
     text-align: center;
 }
+/*.marketing .col-lg-4 {*/
+    /*margin-bottom: 20px;*/
+    /*text-align: center;*/
+/*}*/
 .marketing h2 {
     font-weight: normal;
 }
-.marketing .col-lg-4 p {
-    margin-right: 10px;
-    margin-left: 10px;
-}
+/*.marketing .col-lg-4 p {*/
+    /*margin-right: 10px;*/
+    /*margin-left: 10px;*/
+/*}*/
 
+.price{
+    color:black;
+}
 
 /* Featurettes
 ------------------------- */
@@ -156,3 +174,24 @@ body {
     }
 }
 
+
+.jumbotron {
+    color:#ffffff;
+}
+
+.well{
+    overflow: auto;
+}
+
+.panel-body{
+    color: #d2d2d2;
+}
+
+#loginDiv{
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.feature-list{
+    list-style: none;
+}

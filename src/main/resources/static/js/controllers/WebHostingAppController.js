@@ -101,4 +101,9 @@ app.controller('WebHostingAppController', function($rootScope, $scope, $location
         console.log($scope.page)
     };
 
+    $scope.toggleLoginDiv = function(){
+        var target = $('#loginDiv');
+        $(target).toggleClass('hidden show');
+    }
+
 });

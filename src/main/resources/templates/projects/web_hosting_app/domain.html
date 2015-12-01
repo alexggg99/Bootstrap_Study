@@ -1,0 +1,183 @@
+<link href="css/bootstrap.min.superhero.css" rel="stylesheet" media="screen"/>
+<link href="css/web_hosting_app.css" rel="stylesheet" media="screen"/>
+
+<!--<div class="navbar-wrapper">-->
+<!--<div class="container">-->
+
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Web hosting project</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#/web_hosting_app">Home</a></li>
+                <li class="active"><a href="#/web_hosting_app/domain">Domain</a></li>
+                <li><a href="#/web_hosting_app/contact">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="" data-ng-click="toggleLoginDiv()">Login</a></li>
+                <li><a href="">Register</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div id="loginDiv" class="well hidden">
+                <div class="row">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control"  placeholder="Email"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Password</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control" placeholder="Password"/>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="panel-footer">
+                            <button type="button" data-ng-click="toggleLoginDiv()" class="btn btn-default">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Login Title</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control"  placeholder="Email"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" placeholder="Password"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default">Sign in</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="jumbotron">
+    <div class="container">
+        <h2><i class="fa fa-home"></i>Domain name Registration</h2>
+        <p>The <code>.com</code> days are finally over. The Internet is opening up new territories which allow website owners to finally have
+            an address that speaks perfectly of who they are and what they provide. Your dream website address can now be yours.
+
+            A .zone website is perfect for any site that desires to be the go-to resource for their industry,
+            or specialist area. Movies, music, sports, hobbies, food, construction…every facet of life needs a specialist .zone.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="well">
+            <div class="col-md-10 col-sm-9 col-xs-8">
+                <input type="text" class="form-control domain-search" placeholder="Search domians"/>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-4">
+                <input type="button" class="btn btn-success domain-submit" value="Search"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="panel-default">
+            <div class="panel-body">
+                <h2><i class="fa fa-lock"></i> Domain Privacy</h2>
+                <p>Because domain name registration information is available to the public, anyone can access it through "Whois" searches.
+                    At times our customers may have been included within these searches. However, the spam they received does not in any way come from Namecheap.
+                    We will never give any information about you to others without your express permission.
+                    Our site uses forms in which you give us contact information (such as your name, address, phone number, fax number,
+                    billing information and email address), so you can create an account, place orders, request information etc.
+                    We use your customer information only when it is important for us to contact you regarding functionality changes to our products,
+                    our website, new services and special offers we think you'll find valuable, and to provide customer service.
+                    If you would rather not receive this promotional information, please use the "Purpose and Newsletter"
+                    account functionality in “My Account -> Manage Profile” to change your preferences at any time.
+                    Additionally, you may follow the unsubscribe instructions contained in the newsletters you receive.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel-default">
+                    <div class="panel-body">
+                        <h2><i class="fa fa-hand-o-right"></i> Free Domian</h2>
+                        <p>If Namecheap is involved in a merger, acquisition or sale of all or a portion of its assets,
+                            you will be notified via email and/or a prominent notice on our website of any change in
+                            ownership or use of your personal information, as well as any choices you may have regarding your personal information.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel-default">
+                    <div class="panel-body">
+                        <h2><i class="fa fa-lock"></i> Multipla domains</h2>
+                        <p>If Namecheap is involved in a merger, acquisition or sale of all or a portion of its assets,
+                            you will be notified via email and/or a prominent notice on our website of any change in
+                            ownership or use of your personal information, as well as any choices you may have regarding your personal information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row" id="preFooter"></div>
+</div>
+
+<footer class="footer navbar-default">
+    <div class="container">
+        <p class="pull-right">Copyright 2015, All rights</p>
+        <p>Web hosting project &copy; 2015. &middot;<a href="">Privacy</a> &middot;<a href="">Terms</a></p>
+    </div>
+</footer>
