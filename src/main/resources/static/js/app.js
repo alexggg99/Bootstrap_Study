@@ -102,6 +102,14 @@ app.config(['$routeProvider',
                 templateUrl: 'web_hosting_app/contact',
                 controller: 'WebHostingAppController'
             }).
+            when('/ecommerce_app', {
+                templateUrl: 'ecommerce_app/index',
+                controller: 'EcommerceAppController'
+            }).
+            when('/ecommerce_app/product/:productId', {
+                templateUrl: 'ecommerce_app/product',
+                controller: 'EcommerceAppController'
+            }).
             otherwise({
                 redirectTo: '/'
             });
