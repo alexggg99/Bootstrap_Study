@@ -16,7 +16,7 @@ public class EcommerceController {
         return "projects/ecommerce_app/index";
     }
 
-    @RequestMapping(value = "/ecommerce_app/product")
+    @RequestMapping(value = "/product")
     public String product(){
         return "projects/ecommerce_app/product";
     }

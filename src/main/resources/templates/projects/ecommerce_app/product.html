@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="css/ecommerce_app.css"/>
+<script src="js/transition.js"></script>
+
 <div class="container">
 
     <header>
@@ -34,7 +36,8 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -44,7 +47,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#/ecommerce_app">Home</a></li>
+                    <li><a href="#/ecommerce_app">Home</a></li>
                     <li><a href="#">Whats new</a></li>
                     <li><a href="">Specials</a></li>
                     <li><a href="">My Account</a></li>
@@ -57,14 +60,186 @@
                         <button type="submit" class="btn btn-default">Search</button>
                     </form>
                 </ul>
-            </div><!--/.nav-collapse -->
-        </div><!--/.container-fluid -->
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
     </nav>
 
-   <section>
-       <div class="row">
-           TEST
-       </div>
-   </section>
+    <section>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="main-img" src="/img/phone_.jpg"/>
+                    </div>
+                    <div class="col-md-8 text-muted">
+                        <h2>Samsung Galagy 5</h2>
+
+                        <div class="price">
+                            $699.99
+                        </div>
+                        <hr/>
+                        <p>Quantity
+                            <select class="form-control" ng-model="category">
+                                <option value="">---Please select---</option>
+                                <!-- not selected / blank option -->
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select><br/>
+                            <button class="btn btn-success">Buy Now !!</button>
+                        </p>
+                        <br/><br/>
+
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <!--<a role="button" data-toggle="collapse" data-parent="#accordion"-->
+                                        <!--href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">-->
+                                        <!--Description-->
+                                        <!--</a>-->
+                                        <button type="button" class="btn btn-link btn-block text-left"
+                                                data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                                aria-controls="collapseOne">Description
+                                        </button>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                                     aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <p class="text-muted">
+                                            <strong>Samsung Galaxy S5</strong>
+                                            <br/>
+                                            The phone comes with a 5.10-inch touchsceen display with a resolution of 1080 pixels by 1920 pixels at a PPI of 432 pixels per inch.
+                                            <br/>
+                                            The Samsung Galaxy S5 is powered by 1.9GHz octa-core Exynos Octa 5420 processor and it comes with 2GB of RAM.
+                                            The phone packs 16GB of internal storage that can be expanded up to 128GB via a microSD card.
+                                            As far as the cameras are concerned, the Samsung Galaxy S5 packs a 16-megapixel primary camera on the rear and a 2.1-megapixel front shooter for selfies.
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        <!--<a class="collapsed" role="button" data-toggle="collapse"-->
+                                        <!--data-parent="#accordion" href="#collapseTwo" aria-expanded="false"-->
+                                        <!--aria-controls="collapseTwo">-->
+                                        <!--Specification-->
+                                        <!--</a>-->
+                                        <button type="button" class="btn btn-link  btn-block text-left"
+                                                data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                                                aria-controls="collapseTwo">Specification
+                                        </button>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                                     aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                            <dl class="dl-horizontal text-muted">
+                                                <dt>Alternate names</dt>
+                                                <dd>SM-G900H</dd>
+                                                <dt>Release date</dt>
+                                                <dd>April 2014</dd>
+                                                <dt>Dimensions (mm)</dt>
+                                                <dd>142.00 x 72.50 x 8.10</dd>
+                                                <dt>Weight (g)</dt>
+                                                <dd>145.00</dd>
+                                                <dt>Battery capacity (mAh))</dt>
+                                                <dd>2800</dd>
+                                                <dt>Removable battery</dt>
+                                                <dd>Yes</dd>
+                                            </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h4 class="panel-title">
+                                        <!--<a class="collapsed" role="button" data-toggle="collapse"-->
+                                        <!--data-parent="#accordion" href="#collapseThree" aria-expanded="false"-->
+                                        <!--aria-controls="collapseThree">-->
+                                        <!--Rated-->
+                                        <!--</a>-->
+                                        <button type="button" class="btn btn-link  btn-block text-left"
+                                                data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
+                                                aria-controls="collapseTwo">Rates
+                                        </button>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse text-muted" role="tabpanel"
+                                     aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        <!--<div class="panel panel-default">-->
+                                            <!--<div class="panel-heading">-->
+                                                <!--<h3 class="panel-title"><i class="icon-thumbs-up"></i> 13 April 2014</h3>-->
+                                            <!--</div>-->
+                                            <!--<div class="panel-body">-->
+                                                <!--4/5 stars-->
+                                                <!--By amit ujjwal-->
+                                                <!--it must be dual sim n micro sim...not nano sim...so that in roaming we can use-->
+                                                <!--both the sim..rest all other specification are very good...-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <div class="thumbnail">
+                                            <h3 class="panel-title"><i class="fa fa-thumbs-up"></i> 13 April 2014</h3>
+                                            <div class="caption">
+                                                <p>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </p>
+                                                <blockquote><p>"it must be dual sim n micro sim...not nano sim...so that in roaming we can use
+                                                    both the sim..rest all other specification are very good..."</p>
+                                                    <p><small>amit ujjwal</small></p></blockquote>
+                                            </div>
+                                        </div>
+                                        <div class="thumbnail">
+                                            <h3 class="panel-title"><i class="fa fa-thumbs-up"></i> 10 April 2014</h3>
+                                            <div class="caption">
+                                                <p>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </p>
+                                                <blockquote><p>"I think S4 or Nexus devices are much better options than Samsung Galaxy S5. It
+                                                    does not have much difference so that people will get attracted to it.
+                                                    Samsung has introduced fingerprint scanner and Heart rate monitor features in
+                                                    this version of Galaxy series which are neither of too much use nor worth half a
+                                                    lakh.
+                                                    The only good thing I found in this phone is its 16 megapixel autofocus camera.
+                                                    But again if I have to spend this much amount I would prefer a DSLR camera and a
+                                                    normal Android or Windows phone rather than this one.
+                                                    http://techiesss.blogspot.com/"</p>
+                                                    <p><small>Anurag Gupta</small></p></blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="list-group">
+
+                    <a href="#" class="list-group-item">Category 1</a>
+                    <a href="#" class="list-group-item">Category 2</a>
+                    <a href="#" class="list-group-item">Category 3</a>
+                    <a href="#" class="list-group-item">Category 4</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
 
 </div> <!-- /container -->

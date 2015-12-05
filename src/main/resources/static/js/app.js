@@ -108,7 +108,7 @@ app.config(['$routeProvider',
             }).
             when('/ecommerce_app/product/:productId', {
                 templateUrl: 'ecommerce_app/product',
-                controller: 'EcommerceAppController'
+                controller: 'EcommerceAppProductController'
             }).
             otherwise({
                 redirectTo: '/'

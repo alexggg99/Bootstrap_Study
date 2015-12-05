@@ -48,3 +48,36 @@ header form{
         display: none;
     }
 }
+
+.main-img{
+    width: 100%;
+}
+
+.btn-link, .btn-link:hover, .btn-link:focus{
+     color: black;
+ }
+.btn-link:focus,
+.btn-link:active:focus{
+    outline:none;
+}
+
+.btn-link:focus{
+    text-decoration:none;
+}
+.btn-link:hover{
+    text-decoration:underline;
+}
+
+.btn-link{
+    text-align: left;
+     padding: 0 0 0 0;
+    line-height: inherit;
+}
+
+.container .text-muted {
+     margin: 0 0;
+}
+
+blockquote {
+    font-size: 14px;
+}
