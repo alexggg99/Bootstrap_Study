@@ -110,6 +110,10 @@ app.config(['$routeProvider',
                 templateUrl: 'ecommerce_app/product',
                 controller: 'EcommerceAppProductController'
             }).
+            when('/business_app', {
+                templateUrl: 'bussines_app/index',
+                controller: 'BusinessAppController'
+            }).
             otherwise({
                 redirectTo: '/'
             });
