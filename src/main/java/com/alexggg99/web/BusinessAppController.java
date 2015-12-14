@@ -16,4 +16,19 @@ public class BusinessAppController {
         return "projects/bussines_app/index";
     }
 
+    @RequestMapping(value = "/about")
+    public String about(){
+        return "projects/bussines_app/about";
+    }
+
+    @RequestMapping(value = "/services")
+    public String services(){
+        return "projects/bussines_app/services";
+    }
+
+    @RequestMapping(value = "/contact")
+    public String contact(){
+        return "projects/bussines_app/contact";
+    }
+
 }

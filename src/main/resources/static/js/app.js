@@ -114,6 +114,18 @@ app.config(['$routeProvider',
                 templateUrl: 'bussines_app/index',
                 controller: 'BusinessAppController'
             }).
+            when('/business_app/about', {
+                templateUrl: 'bussines_app/about',
+                controller: 'BusinessAppController'
+            }).
+            when('/business_app/services', {
+                templateUrl: 'bussines_app/services',
+                controller: 'BusinessAppController'
+            }).
+            when('/business_app/contact', {
+                templateUrl: 'bussines_app/contact',
+                controller: 'BusinessAppController'
+            }).
             otherwise({
                 redirectTo: '/'
             });
