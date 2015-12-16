@@ -7,6 +7,12 @@
     margin-top: 30px;
 }
 
+.footer{
+    background: #0383c0 url(../img/navbar_background.png) repeat-x;
+    border: 1px #ccc solid;
+    margin-top: 30px;
+}
+
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus{
     background: none;
@@ -80,4 +86,8 @@ header form{
 
 blockquote {
     font-size: 14px;
+}
+
+@media (width: 920) {
+    
 }

@@ -24,10 +24,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @SpringBootApplication
 public class BootstrapStudyApplication extends WebMvcConfigurerAdapter {
 
-    @Override
-    public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/cms_app/login").setViewName("login");
-    }
+//    @Override
+//    public void addViewControllers(ViewControllerRegistry registry) {
+//        registry.addViewController("/cms_app/login").setViewName("login");
+//    }
 
     public static void main(String[] args) throws Exception {
         new SpringApplicationBuilder(BootstrapStudyApplication.class).run(args);

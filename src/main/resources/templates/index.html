@@ -22,55 +22,83 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="sticky-footer-navbar.css" rel="stylesheet" media="screen"></link>
-
+    <link href="sticky-footer-navbar.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" href="css/ecommerce_app.css"/>
 </head>
 
 <body ng-app="myApp" scroll="">
 
+<div class="container">
+    <header>
+        <div class="row">
+            <div class="col-md-4 col-xs-7">
+                <div class="container logo">
+                    <div class="col-sm-4">
+                        <i class="fa fa-cubes fa-5x"></i>
+                    </div>
+                    <div class="col-sm-8">
+                        <h3>EcommerceApp</h3>
+                    </div>
+                </div>
+                <p class="subtext">Bootstrap ecommerce template</p>
+            </div>
+            <div class="col-md-8 col-xs-12">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" placeholder="email"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" placeholder="Password"/>
+                    </div>
+                    <button type="submit" class="btn btn-default">Login</button>
+                </form>
+            </div>
+        </div>
+    </header>
 
- <!--Fixed navbar-->
-<!--<nav class="navbar navbar-default navbar-fixed-top">-->
-    <!--<div class="container">-->
-        <!--<div class="navbar-header">-->
-            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">-->
-                <!--<span class="sr-only">Toggle navigation</span>-->
-                <!--<span class="icon-bar"></span>-->
-                <!--<span class="icon-bar80/test"></span>-->
-                <!--<span class="icon-bar"></span>-->
-            <!--</button>-->
-            <!--<a class="navbar-brand" href="#">Project name</a>-->
-        <!--</div>-->
-        <!--<div id="navbar" class="collapse navbar-collapse">-->
-            <!--<ul class="nav navbar-nav">-->
-                <!--<li class="active"><a href="#">Home</a></li>-->
-                <!--<li><a href="#about">About</a></li>-->
-                <!--<li><a href="#contact">Contact</a></li>-->
-                <!--<li class="dropdown">-->
-                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
-                    <!--<ul class="dropdown-menu">-->
-                        <!--<li><a href="#">Action</a></li>-->
-                        <!--<li><a href="#">Another action</a></li>-->
-                        <!--<li><a href="#">Something else here</a></li>-->
-                        <!--<li role="separator" class="divider"></li>-->
-                        <!--<li class="dropdown-header">Nav header</li>-->
-                        <!--<li><a href="#">Separated link</a></li>-->
-                        <!--<li><a href="#">One more separated link</a></li>-->
-                    <!--</ul>-->
-                <!--</li>-->
-            <!--</ul>-->
-        <!--</div>&lt;!&ndash;/.nav-collapse &ndash;&gt;-->
-    <!--</div>-->
-<!--</nav>-->
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Ecommerce app</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#/ecommerce_app">Home</a></li>
+                    <li><a href="#">Whats new</a></li>
+                    <li><a href="">Specials</a></li>
+                    <li><a href="">My Account</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <form class="navbar-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search"/>
+                        </div>
+                        <button type="submit" class="btn btn-default">Search</button>
+                    </form>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+    </nav>
+</div>
 
 <!-- Begin page content -->
 <div ng-view=""></div>
 
-<!--<footer class="footer">-->
-    <!--<div class="container">-->
-        <!--<p class="text-muted">Place sticky footer content here.</p>-->
-    <!--</div>-->
-<!--</footer>-->
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">Place sticky footer content here.</p>
+        </div>
+    </footer>
 
 
 <!-- Bootstrap core JavaScript
@@ -84,19 +112,8 @@
         th:src="@{/webjars/angularjs/1.3.15/angular-route.js}"></script>
 
 <script src="js/app.js"></script>
-<script src="js/controllers/HomeController.js"></script>
-<script src="js/controllers/AppSalesController.js"></script>
-<script src="js/controllers/AppSocialNetController.js"></script>
- <script src="js/controllers/AppAgencyController.js"></script>
- <script src="js/directive/AppAgencyDirective.js"></script>
- <script src="js/controllers/AppPhotoGalleryController.js"></script>
- <script src="js/controllers/AppCMSController.js"></script>
- <script src="js/controllers/WebHostingAppController.js"></script>
- <script src="js/controllers/AppCMSPageController.js"></script>
- <script src="js/services/AppCMSService.js"></script>
  <script src="js/controllers/EcommerceAppController.js"></script>
  <script src="js/controllers/EcommerceAppProductController.js"></script>
- <script src="js/controllers/BusinessAppController.js"></script>
 
 </body>
 </html>

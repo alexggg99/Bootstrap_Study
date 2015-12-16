@@ -3,7 +3,7 @@
  */
 
 
-app.controller('HomeController', function($scope, $location) {
+app.controller('IndexController', function($scope, $location) {
 
     $scope.email = [];
 
