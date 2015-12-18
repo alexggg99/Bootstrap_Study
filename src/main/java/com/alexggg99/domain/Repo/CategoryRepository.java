@@ -1,5 +1,6 @@
-package com.alexggg99.domain;
+package com.alexggg99.domain.Repo;
 
+import com.alexggg99.domain.Category;
 import org.springframework.data.repository.CrudRepository;
 
 /**

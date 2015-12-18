@@ -10,15 +10,7 @@ app.config(['$routeProvider',
         $routeProvider.
             when('/', {
                 templateUrl: 'index',
-                controller: 'HomeController'
-            }).
-            when('/ecommerce_app', {
-                templateUrl: 'ecommerce_app/index',
-                controller: 'EcommerceAppController'
-            }).
-            when('/ecommerce_app/product/:productId', {
-                templateUrl: 'ecommerce_app/product',
-                controller: 'EcommerceAppProductController'
+                controller: 'IndexController'
             }).
             otherwise({
                 redirectTo: '/'

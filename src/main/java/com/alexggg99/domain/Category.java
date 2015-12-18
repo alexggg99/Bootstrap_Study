@@ -22,15 +22,15 @@ public class Category {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "Category")
+    @OneToMany(mappedBy = "category")
     @JsonIgnore
-    List<Page> pages;
+    private List<Product> pages;
 
     public long getId() {
         return id;
@@ -48,11 +48,12 @@ public class Category {
         this.name = name;
     }
 
-    public List<Page> getPages() {
+    public List<Product> getPages() {
         return pages;
     }
 
-    public void setPages(List<Page> pages) {
+    public void setPages(List<Product> pages) {
         this.pages = pages;
     }
+
 }

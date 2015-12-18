@@ -3,21 +3,18 @@
  */
 
 
-app.controller('IndexController', function($scope, $location) {
+app.controller('IndexController', function($scope, $location, productsService) {
 
-    $scope.email = [];
+    $scope.products = [];
 
-    $scope.selectedMail = {};
-
-    $scope.showReplay = false;
-
-    $scope.replay = function(){
-        $location.path("/#/replay");
+    $scope.init = function(){
+        productsService.getAllProducts().then(function(data){
+            $scope.products = data.data;
+        })
     };
 
     $scope.silence = function($event){
         $event.stopPropagation();
     }
-
 
 });

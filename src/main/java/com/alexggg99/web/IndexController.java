@@ -16,27 +16,9 @@ public class IndexController {
         return "index";
     }
 
-    @RequestMapping(value = "/home")
-    public String home(){
-        return "home";
+    @RequestMapping("/index")
+    public String mainpage() {
+        return "views/index";
     }
-
-    @RequestMapping(value = "/menu")
-    public String replay(){
-        return "menu";
-    }
-
-    @RequestMapping(value = "/typography")
-    public String typography() {
-        return "typography";
-    }
-
-    @RequestMapping("/greeting")
-    @ResponseBody
-    public String json(){
-        return "{\"id\":1,\"content\":\"Hello, World!\"}";
-    }
-
-
 
 }
