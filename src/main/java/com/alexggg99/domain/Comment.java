@@ -1,6 +1,9 @@
 package com.alexggg99.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by alexggg99 on 18.12.15.
@@ -9,7 +12,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "comments")
-public class Comment {
+public class Comment implements Serializable{
 
     public Comment() {
     }
@@ -22,6 +25,7 @@ public class Comment {
     private String author;
     private String comment;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;

@@ -44,8 +44,10 @@ public class Product implements Serializable {
     @Column(name = "image_url")
     private String imageURL;
 
-//    @OneToMany(mappedBy = "product")
-//    private List<Comment> comments;
+    @OneToMany(mappedBy = "product")
+    private List<Comment> comments;
+
+    private Double stars;
 
     public long getId() {
         return id;
@@ -87,13 +89,13 @@ public class Product implements Serializable {
         this.spec = spec;
     }
 
-//    public List<Comment> getComments() {
-//        return comments;
-//    }
-//
-//    public void setComments(List<Comment> comments) {
-//        this.comments = comments;
-//    }
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
 
     public String getImageURL() {
         return imageURL;
@@ -101,5 +103,13 @@ public class Product implements Serializable {
 
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
+    }
+
+    public Double getStars() {
+        return stars;
+    }
+
+    public void setStars(Double stars) {
+        this.stars = stars;
     }
 }
