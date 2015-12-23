@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created by alexggg99 on 18.12.15.
@@ -24,6 +25,10 @@ public class Comment implements Serializable{
 
     private String author;
     private String comment;
+
+    @Column(name = "create_date")
+    @Temporal(TemporalType.DATE)
+    private Date createDate;
 
     @JsonIgnore
     @ManyToOne
@@ -60,5 +65,13 @@ public class Comment implements Serializable{
 
     public void setProduct(Product product) {
         this.product = product;
+    }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
     }
 }

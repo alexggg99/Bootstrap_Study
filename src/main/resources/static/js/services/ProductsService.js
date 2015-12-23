@@ -22,7 +22,22 @@ app.service('productsService', ['$http', '$q', function($http, $q) {
             return deferObject.promise;
         },
         getAllProducts: function(){
-            var promise = $http.get('product/'),
+            var promise = $http.get('product/getAll'),
+                deferObject  =  deferObject || $q.defer();
+
+            promise.then(
+                // OnSuccess function
+                function(answer){
+                    deferObject.resolve(answer);
+                },
+                // OnFailure function
+                function(reason){
+                    deferObject.reject(reason);
+                });
+            return deferObject.promise;
+        },
+        getProduct: function(productId){
+            var promise = $http.get("product/"+productId),
                 deferObject  =  deferObject || $q.defer();
 
             promise.then(

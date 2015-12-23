@@ -12,6 +12,10 @@ app.config(['$routeProvider',
                 templateUrl: 'index',
                 controller: 'IndexController'
             }).
+            when('/product/:productId', {
+                templateUrl: 'product',
+                controller: 'productController'
+            }).
             otherwise({
                 redirectTo: '/'
             });

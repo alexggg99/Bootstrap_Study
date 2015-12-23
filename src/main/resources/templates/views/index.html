@@ -4,23 +4,18 @@
         <div class="row">
             <div class="col-md-4" ng-repeat="product in products">
                 <div class="thumbnail">
-                    {{product}}
                     <img ng-src="{{product.imageURL}}"/>
                     <div class="caption">
-                        <h4 class="pull-right">{{product.price}}</h4>
+                        <h4 class="pull-right">{{product.price}}$</h4>
                         <h4><a ng-href="#/product/{{product.id}}">{{product.title}}</a></h4>
                         <ul ng-repeat="spec in product.spec.split(',')">
                             <li>{{spec}}</li>
                         </ul>
                     </div>
                     <div class="ratings">
-                        <p class="pull-right" >15 Reviews</p>
-                        <p ng-repeat="product in products">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
+                        <p class="pull-right" ><a href="">{{product.comments.length}} Reviews</a></p>
+                        <p>
+                            <i class="fa fa-star" ng-repeat="star in getStars(product.stars) track by $index"></i>
                         </p>
                     </div>
                 </div>
