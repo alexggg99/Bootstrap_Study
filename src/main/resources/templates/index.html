@@ -28,7 +28,7 @@
 
 <body ng-app="myApp" scroll="">
 
-<div class="container">
+<div class="container" ng-controller="MenuController" ng-init="init()">
     <header>
         <div class="row">
             <div class="col-md-4 col-xs-7">
@@ -55,7 +55,7 @@
         </div>
     </header>
 
-    <nav class="navbar navbar-default" role="navigation" ng-controller="MenuController" ng-init="init()">
+    <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
@@ -138,6 +138,7 @@
 <script src="js/controllers/ProductController.js"></script>
 <script src="js/services/ProductsService.js"></script>
 <script src="js/services/CategoryService.js"></script>
+<script src="js/services/AuthService.js"></script>
 
 </body>
 </html>

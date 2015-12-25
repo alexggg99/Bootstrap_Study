@@ -19,5 +19,9 @@ app.config(['$routeProvider',
             otherwise({
                 redirectTo: '/'
             });
+
+        $httpProvider.defaults.withCredentials = true;
+        $locationProvider.html5Mode(true).hashPrefix('!');
+
     }]);
 

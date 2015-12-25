@@ -19,14 +19,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable() // DISABLED CSRF protection to make it easier !
                 .authorizeRequests()
-                .antMatchers("/", "/**").permitAll();
+                .antMatchers("/", "/**").permitAll()
+                .antMatchers("/user/**").hasRole("USER");
     }
 
 
-    @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.userDetailsService(userDetailsService);
-        auth.inMemoryAuthentication().withUser("user").password("123").roles("USER");
-    }
+//    @Autowired
+//    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+////        auth.userDetailsService(userDetailsService);
+//        auth.inMemoryAuthentication().withUser("user").password("123").roles("USER");
+//    }
 
 }

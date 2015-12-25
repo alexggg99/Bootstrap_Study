@@ -3,7 +3,7 @@
  */
 
 
-app.controller('MenuController', function($scope, $location, categoryService) {
+app.controller('MenuController', function($scope, $location, categoryService, authService) {
 
     $scope.categories = [];
 
@@ -12,5 +12,18 @@ app.controller('MenuController', function($scope, $location, categoryService) {
             $scope.categories = data.data;
         })
     }
+
+    $scope.login = function () {
+        authService.login($scope.user, function (data) {
+            if (!data.error) location.reload();
+            else jQuery('#error.modal').modal('show');
+        });
+    };
+    $scope.logout = function () {
+        authService.logout(function (data) {
+            if (!data.error) location.reload();
+            else jQuery('#error.modal').modal('show');
+        });
+    };
 
 });

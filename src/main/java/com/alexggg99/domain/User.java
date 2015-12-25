@@ -20,15 +20,15 @@ public class User{
     public User() {
     }
 
-    public User(String password, String username, String firstName, String lastName, long vkId) {
+    public User(String password, String username, String firstName, String lastName) {
         this.password = password;
         this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.idVk = vkId;
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "role_id")
     public Role authority;
 
     @NotEmpty
@@ -38,15 +38,17 @@ public class User{
     @NotEmpty
     private String username;
 
-    private boolean accountNonExpired = true;
-    private boolean accountNonLocked = true;
-    private boolean credentialsNonExpired = true;
-    private boolean enabled = true;
+//    private boolean accountNonExpired = true;
+//    private boolean accountNonLocked = true;
+//    private boolean credentialsNonExpired = true;
+//    private boolean enabled = true;
 
     @Id
     @GeneratedValue
     private Integer id;
+    @Column(name = "first_name")
     private String firstName;
+    @Column(name = "last_name")
     private String lastName;
     private Date dateCreate;
     private Long idVk;
@@ -116,35 +118,35 @@ public class User{
         this.password = password;
     }
 
-    public boolean isAccountNonExpired() {
-        return accountNonExpired;
-    }
-
-    public void setAccountNonExpired(boolean accountNonExpired) {
-        this.accountNonExpired = accountNonExpired;
-    }
-
-    public boolean isAccountNonLocked() {
-        return accountNonLocked;
-    }
-
-    public void setAccountNonLocked(boolean accountNonLocked) {
-        this.accountNonLocked = accountNonLocked;
-    }
-
-    public boolean isCredentialsNonExpired() {
-        return credentialsNonExpired;
-    }
-
-    public void setCredentialsNonExpired(boolean credentialsNonExpired) {
-        this.credentialsNonExpired = credentialsNonExpired;
-    }
-
-    public boolean isEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
-    }
+//    public boolean isAccountNonExpired() {
+//        return accountNonExpired;
+//    }
+//
+//    public void setAccountNonExpired(boolean accountNonExpired) {
+//        this.accountNonExpired = accountNonExpired;
+//    }
+//
+//    public boolean isAccountNonLocked() {
+//        return accountNonLocked;
+//    }
+//
+//    public void setAccountNonLocked(boolean accountNonLocked) {
+//        this.accountNonLocked = accountNonLocked;
+//    }
+//
+//    public boolean isCredentialsNonExpired() {
+//        return credentialsNonExpired;
+//    }
+//
+//    public void setCredentialsNonExpired(boolean credentialsNonExpired) {
+//        this.credentialsNonExpired = credentialsNonExpired;
+//    }
+//
+//    public boolean isEnabled() {
+//        return enabled;
+//    }
+//
+//    public void setEnabled(boolean enabled) {
+//        this.enabled = enabled;
+//    }
 }
