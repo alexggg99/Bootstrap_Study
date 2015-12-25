@@ -63,7 +63,7 @@ public class AuthController {
         try{
             Object obj = parser.parse(loginRequest.toString());
             JSONObject jsonObject = (JSONObject) obj;
-            username = (String) jsonObject.get("login");
+            username = (String) jsonObject.get("username");
             password = (String) jsonObject.get("password");
         }catch(ParseException pe){
             System.out.println("position: " + pe.getPosition());

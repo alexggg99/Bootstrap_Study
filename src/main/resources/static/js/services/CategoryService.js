@@ -2,7 +2,7 @@
  * Created by Alex on 27.11.2015.
  */
 
-app.service('categoryService', ['$http', '$q', function($http, $q) {
+app.service('categoryService', function($http, $q) {
 
     var deferObject,
     myMethods = {
@@ -25,4 +25,4 @@ app.service('categoryService', ['$http', '$q', function($http, $q) {
 
     return myMethods;
 
-}]);
+});

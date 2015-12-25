@@ -2,7 +2,7 @@
  * Created by Alex on 27.11.2015.
  */
 
-app.service('productsService', ['$http', '$q', function($http, $q) {
+app.service('productsService', function($http, $q) {
 
     var deferObject,
     myMethods = {
@@ -55,4 +55,4 @@ app.service('productsService', ['$http', '$q', function($http, $q) {
 
     return myMethods;
 
-}]);
+});

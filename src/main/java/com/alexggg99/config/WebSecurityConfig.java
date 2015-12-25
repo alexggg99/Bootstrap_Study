@@ -17,10 +17,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+                .authorizeRequests()
+                .antMatchers("/user/**").hasRole("USER");
+        http
                 .csrf().disable() // DISABLED CSRF protection to make it easier !
                 .authorizeRequests()
-                .antMatchers("/", "/**").permitAll()
-                .antMatchers("/user/**").hasRole("USER");
+                .antMatchers("/", "/product", "/auth/**").permitAll();
     }
 
 
