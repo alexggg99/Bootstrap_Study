@@ -7,7 +7,9 @@ app.controller('MenuController', function($scope, $location, categoryService, au
 
     $scope.categories = [];
 
-    $scope.user = {};
+    $scope.user = {
+        error : true
+    };
 
     $scope.init = function(){
         categoryService.getAllCategories().then(function(data){
@@ -16,11 +18,14 @@ app.controller('MenuController', function($scope, $location, categoryService, au
     }
 
     $scope.login = function () {
-        console.log($scope.user);
         authService.login($scope.user, function (data) {
-            if (!data.error) $scope.user.error = false;
+            if (!data.error){
+                $scope.user = data;
+                console.log($scope.user);
+            }
             else $scope.user.error = true;
         });
+
     };
     $scope.logout = function () {
         authService.logout(function (data) {

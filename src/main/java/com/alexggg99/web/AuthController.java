@@ -83,7 +83,7 @@ public class AuthController {
             authUser(user);
 
         }
-        return "{\"error\": false}";
+        return "{\"error\": false, \"name\":\""+ user.getFirstName() + " " + user.getLastName() + "\"}";
     }
 
     @ResponseBody

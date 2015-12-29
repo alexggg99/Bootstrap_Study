@@ -42,8 +42,8 @@
                 <p class="subtext">Online store</p>
             </div>
             <div class="col-md-8 col-xs-12">
-                <form class="form-inline" name="loginForm" ng-submit="login()" novalidate="">
-                    <span ng-show="user.error == true" class="help-block">Something may have gone wrong</span>
+                <form class="form-inline" ng-hide="user.error == false" name="loginForm" ng-submit="login()" novalidate="">
+                    <!--<span ng-show="user.error == true" class="help-block">Something may have gone wrong</span>-->
                     <div class="form-group">
                         <label>Email</label>
                         <input type="text" class="form-control" name="user.username" data-ng-model="user.username"
@@ -56,6 +56,9 @@
                     </div>
                     <button type="submit" class="btn btn-default" ng-disabled="loginForm.$invalid">Login</button>
                 </form>
+                <div class="vcenter" data-ng-show="user.error == false">
+                    <p>Welcome customer, {{user.name}}</p>
+                </div>
             </div>
         </div>
     </header>
