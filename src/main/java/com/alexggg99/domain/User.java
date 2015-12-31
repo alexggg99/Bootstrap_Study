@@ -52,6 +52,7 @@ public class User{
     private String lastName;
     private Date dateCreate;
     private Long idVk;
+    private String email;
 
     public Role getAuthority() {
         return authority;
@@ -118,7 +119,15 @@ public class User{
         this.password = password;
     }
 
-//    public boolean isAccountNonExpired() {
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    //    public boolean isAccountNonExpired() {
 //        return accountNonExpired;
 //    }
 //

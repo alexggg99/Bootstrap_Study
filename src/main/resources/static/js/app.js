@@ -8,12 +8,16 @@ var app = angular.module('myApp', ['ngResource', 'ngRoute']);
 app.config(function($httpProvider, $routeProvider, $locationProvider) {
         $routeProvider.
             when('/', {
-                templateUrl: 'index',
+                templateUrl: 'view',
                 controller: 'IndexController'
             }).
             when('/product/:productId', {
-                templateUrl: 'product',
+                templateUrl: 'profile/view',
                 controller: 'productController'
+            }).
+            when('/profile', {
+                templateUrl: 'profile/view',
+                controller: 'profileController'
             }).
             otherwise({
                 redirectTo: '/'

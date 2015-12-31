@@ -27,7 +27,7 @@ public class ProductController {
         return result;
     }
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping("/view")
     public String productPage() {
         return "views/product";
     }

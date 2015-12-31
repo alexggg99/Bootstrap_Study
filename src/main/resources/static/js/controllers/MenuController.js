@@ -3,7 +3,7 @@
  */
 
 
-app.controller('MenuController', function($scope, $location, categoryService, authService) {
+app.controller('MenuController', function($scope, $location, categoryService, authService, userService) {
 
     $scope.categories = [];
 
@@ -15,6 +15,9 @@ app.controller('MenuController', function($scope, $location, categoryService, au
         categoryService.getAllCategories().then(function(data){
             $scope.categories = data.data;
         })
+        userService.check(function(data){
+            $scope.user = data;
+        });
     }
 
     $scope.login = function () {

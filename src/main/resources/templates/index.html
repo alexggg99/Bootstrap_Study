@@ -56,8 +56,9 @@
                     </div>
                     <button type="submit" class="btn btn-default" ng-disabled="loginForm.$invalid">Login</button>
                 </form>
-                <div class="vcenter" data-ng-show="user.error == false">
-                    <p>Welcome customer, {{user.name}}</p>
+                <div class="text-right welcome-text" data-ng-show="user.error == false">
+                    <p>Welcome</p>
+                    <h4><a class="btn btn-default" href="/profile">Open your profile</a></h4>
                 </div>
             </div>
         </div>
@@ -146,9 +147,11 @@
 <script src="js/controllers/IndexController.js"></script>
 <script src="js/controllers/MenuController.js"></script>
 <script src="js/controllers/ProductController.js"></script>
+<script src="js/controllers/ProfileController.js"></script>
 <script src="js/services/ProductsService.js"></script>
 <script src="js/services/CategoryService.js"></script>
 <script src="js/services/AuthService.js"></script>
+<script src="js/services/UserService.js"></script>
 
 </body>
 </html>

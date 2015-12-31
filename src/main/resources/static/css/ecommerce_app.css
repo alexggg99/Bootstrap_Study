@@ -139,7 +139,10 @@ blockquote {
 
 
 
-.vcenter {
-    display: table-cell;
-    vertical-align: middle;
+.welcome-text {
+    margin-top: 20px;
+}
+
+.profileController{
+    margin: 0 !important;
 }

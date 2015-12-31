@@ -11,14 +11,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class IndexController {
 
-    @RequestMapping("/")
+    @RequestMapping("/*")
     public String index() {
         return "index";
     }
 
-    @RequestMapping("/index")
+    @RequestMapping("/view")
     public String mainpage() {
         return "views/index";
     }
+
+//    @RequestMapping("/product/**")
+//    public String mainpage2() {
+//        return "index";
+//    }
 
 }

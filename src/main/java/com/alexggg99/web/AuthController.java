@@ -48,7 +48,6 @@ public class AuthController {
             UserDetails userDetail = (UserDetails) auth.getPrincipal();
             return "{\"error\": false}";
         }
-        System.out.println("test" + auth.getName());
         return "{\"error\": true}";
     }
 
