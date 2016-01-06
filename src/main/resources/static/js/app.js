@@ -12,19 +12,23 @@ app.config(function($httpProvider, $routeProvider, $locationProvider) {
                 controller: 'IndexController'
             }).
             when('/product/:productId', {
-                templateUrl: 'profile/view',
+                templateUrl: 'product/view',
                 controller: 'productController'
             }).
             when('/profile', {
                 templateUrl: 'profile/view',
                 controller: 'profileController'
             }).
+            when('/contact', {
+                templateUrl: 'contact/view',
+                controller: 'contactController'
+            }).
             otherwise({
                 redirectTo: '/'
             });
 
         $httpProvider.defaults.withCredentials = true;
-        $locationProvider.html5Mode(true).hashPrefix('!');
+        //$locationProvider.html5Mode(true).hashPrefix('!');
 
     });
 

@@ -17,11 +17,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/user/**", "/profile").authenticated();
+                .antMatchers("/profile/**").authenticated();
         http
                 .csrf().disable() // DISABLED CSRF protection to make it easier !
                 .authorizeRequests()
-                .antMatchers("/", "/product", "/auth/**").permitAll();
+                .antMatchers("/", "/product", "/auth/**", "/user/**").permitAll();
     }
 
 

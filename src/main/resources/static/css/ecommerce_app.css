@@ -146,3 +146,11 @@ blockquote {
 .profileController{
     margin: 0 !important;
 }
+
+.contact-css{
+    padding-bottom:  55px;
+}
+
+.contact-css .form-control-feedback{
+    width: 28px;
+}

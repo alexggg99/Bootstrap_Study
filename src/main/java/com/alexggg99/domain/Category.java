@@ -16,10 +16,6 @@ public class Category {
     public Category() {
     }
 
-    public Category(String pages) {
-        this.name = name;
-    }
-
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)

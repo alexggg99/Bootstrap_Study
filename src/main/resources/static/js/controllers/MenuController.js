@@ -3,7 +3,11 @@
  */
 
 
-app.controller('MenuController', function($scope, $location, categoryService, authService, userService) {
+app.controller('MenuController', function($scope, categoryService, authService, userService, $route, $routeParams, $location) {
+
+    $scope.$route = $route;
+    $scope.$location = $location;
+    $scope.$routeParams = $routeParams;
 
     $scope.categories = [];
 
@@ -32,8 +36,10 @@ app.controller('MenuController', function($scope, $location, categoryService, au
     };
     $scope.logout = function () {
         authService.logout(function (data) {
-            if (!data.error) location.reload();
-            else jQuery('#error.modal').modal('show');
+            if (!data.error){
+                $scope.user.error = true;
+                $location.path($location.path());
+            }
         });
     };
 

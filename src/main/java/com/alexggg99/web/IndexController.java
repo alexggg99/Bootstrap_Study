@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class IndexController {
 
-    @RequestMapping("/*")
+    @RequestMapping("/")
     public String index() {
         return "index";
     }
@@ -21,9 +21,9 @@ public class IndexController {
         return "views/index";
     }
 
-//    @RequestMapping("/product/**")
-//    public String mainpage2() {
-//        return "index";
-//    }
+    @RequestMapping("/login")
+    public String login() {
+        return "views/login";
+    }
 
 }
