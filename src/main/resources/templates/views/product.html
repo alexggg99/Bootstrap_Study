@@ -14,6 +14,12 @@
                             <h2><strong>{{product.price}}$</strong></h2>
                         </div>
                         <hr/>
+                        <div ng-show="responseStatus == 200" class="alert alert-success">
+                            <a class="panel-close close" data-dismiss="alert">×</a>
+                            <strong>On your email ({{user_email}}) was sent letter ! Please check your email.</strong></div>
+                        <div ng-show="responseStatus == 403" class="alert alert-danger">
+                            <a class="panel-close close" data-dismiss="alert">×</a>
+                            <span class="glyphicon glyphicon-alert"></span><strong> Warning !! Need authentication !!</strong></div>
                         <p>Quantity
                             <select class="form-control" ng-model="quantity">
                                 <option value="">---Please select---</option>
@@ -24,7 +30,7 @@
                                 <option value="4">4</option>
                                 <option value="4">5</option>
                             </select><br/>
-                            <button class="btn btn-success">Buy Now !!</button>
+                            <button ng-disabled="!(quantity >= 1)" class="btn btn-success" ng-click="buy()">Buy Now !!</button>
                         </p>
                         <br/><br/>
 

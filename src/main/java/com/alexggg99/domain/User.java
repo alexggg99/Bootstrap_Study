@@ -32,7 +32,6 @@ public class User{
     public Role authority;
 
     @NotEmpty
-    @JsonIgnore
     private String password;
 
     @NotEmpty
@@ -53,6 +52,9 @@ public class User{
     private Date dateCreate;
     private Long idVk;
     private String email;
+
+    @Column(name = "image_url")
+    private String imageURL;
 
     public Role getAuthority() {
         return authority;
@@ -127,35 +129,12 @@ public class User{
         this.email = email;
     }
 
-    //    public boolean isAccountNonExpired() {
-//        return accountNonExpired;
-//    }
-//
-//    public void setAccountNonExpired(boolean accountNonExpired) {
-//        this.accountNonExpired = accountNonExpired;
-//    }
-//
-//    public boolean isAccountNonLocked() {
-//        return accountNonLocked;
-//    }
-//
-//    public void setAccountNonLocked(boolean accountNonLocked) {
-//        this.accountNonLocked = accountNonLocked;
-//    }
-//
-//    public boolean isCredentialsNonExpired() {
-//        return credentialsNonExpired;
-//    }
-//
-//    public void setCredentialsNonExpired(boolean credentialsNonExpired) {
-//        this.credentialsNonExpired = credentialsNonExpired;
-//    }
-//
-//    public boolean isEnabled() {
-//        return enabled;
-//    }
-//
-//    public void setEnabled(boolean enabled) {
-//        this.enabled = enabled;
-//    }
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+    }
+
 }

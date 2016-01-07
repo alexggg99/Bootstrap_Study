@@ -1,11 +1,10 @@
 <div class="container" ng-init="init()">
-    {{user | json}}
-    <h1 class="page-header">Profile</h1>
+    <h1>Profile</h1>
     <div class="row">
         <!-- left column -->
         <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="text-center">
-                <img src="http://lorempixel.com/200/200/people/9/" class="avatar img-circle img-thumbnail" alt="avatar"/>
+                <img data-ng-src="{{user.imageURL}}" class="avatar img-circle img-thumbnail" alt="avatar"/>
                 <h6>Upload a different photo...</h6>
                 <input type="file" class="text-center center-block well well-sm"/>
             </div>
@@ -17,44 +16,51 @@
                 <i class="fa fa-coffee"></i>
                 This is a customer <strong>profile</strong>. Here your can edit you personal information.
             </div>
+            <div ng-show="responseStatus == 200" class="alert alert-success">
+                <a class="panel-close close" data-dismiss="alert">×</a>
+                <strong><span class="glyphicon glyphicon-send"></span> Success! Prifile updated</strong></div>
+            <div ng-show="responseStatus == 500" class="alert alert-danger">
+                <a class="panel-close close" data-dismiss="alert">×</a>
+                <span class="glyphicon glyphicon-alert"></span><strong> Sorry !! Service is unavailable</strong>
+            </div>
             <h3>User info</h3>
             <form class="form-horizontal" role="form">
                 <div class="form-group">
                     <label class="col-lg-3 control-label">First name:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" data-ng-model="{{user.first_name}}" type="text"/>
+                        <input class="form-control" data-ng-model="user.firstName" type="text"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Last name:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" data-ng-model="{{user.last_name}}" type="text"/>
+                        <input class="form-control" data-ng-model="user.lastName" type="text"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Email:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" data-ng-model="{{user.email}}" type="text"/>
+                        <input class="form-control" data-ng-model="user.email" type="text"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Username:</label>
                     <div class="col-md-8">
-                        <input class="form-control" data-ng-model="{{user.username}}" type="text"/>
+                        <input class="form-control" data-ng-model="user.username" type="text"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Password:</label>
                     <div class="col-md-8">
-                        <input class="form-control" data-ng-model="{{user.password}}" type="password"/>
+                        <input class="form-control" data-ng-model="user.password" type="password"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label"></label>
                     <div class="col-md-8">
-                        <input class="btn btn-primary" value="Save Changes" type="button"/>
+                        <input class="btn btn-primary" ng-click="saveUser()" ng-disabled="!canSave()" value="Save Changes" type="button"/>
                         <span></span>
-                        <input class="btn btn-default" value="Cancel" type="reset"/>
+                        <input class="btn btn-default" ng-click="revert()" value="Cancel" type="button" ng-disabled="!canRevert()"/>
                     </div>
                 </div>
             </form>

@@ -2,8 +2,12 @@
 <div class="container contact-css">
     <div class="row">
         <div class="col-md-12">
-            <div ng-show="responseStatus == 200" class="alert alert-success"><strong><span class="glyphicon glyphicon-send"></span> Success! Message sent.</strong></div>
-            <div ng-show="responseStatus == 500" class="alert alert-danger"><span class="glyphicon glyphicon-alert"></span><strong> Sorry !! Service is unavailable</strong></div>
+            <div ng-show="responseStatus == 200" class="alert alert-success">
+                <a class="panel-close close" data-dismiss="alert">×</a>
+                <strong><span class="glyphicon glyphicon-send"></span> Success! Message sent.</strong></div>
+            <div ng-show="responseStatus == 500" class="alert alert-danger">
+                <a class="panel-close close" data-dismiss="alert">×</a>
+                <span class="glyphicon glyphicon-alert"></span><strong> Sorry !! Service is unavailable</strong></div>
         </div>
         <form ng-submit="postMessage()" name="messageForm" novalidate="">
             <div class="col-lg-6">

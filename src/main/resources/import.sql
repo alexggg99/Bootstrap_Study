@@ -1,8 +1,8 @@
 insert into role(id, authority) values (1, 'USER')
 insert into role(id, authority) values (2, 'ADMIN')
 
-insert into user(id, username, password, first_name, last_name, role_id, email) values (1, 'admin', '123', 'Alex', 'Ivanov', 2, 'admin@admin.ru')
-insert into user(id, username, password, first_name, last_name, role_id, email) values (2, 'user', '123', 'Sergey', 'Popov', 1, 'user@user.ru')
+insert into user(id, username, password, first_name, last_name, role_id, email, image_url) values (1, 'admin', '123', 'Alex', 'Ivanov', 2, 'admin@admin.ru', '/img/user_foto/user_id_1.jpg')
+insert into user(id, username, password, first_name, last_name, role_id, email, image_url) values (2, 'user', '123', 'Sergey', 'Popov', 1, 'user@user.ru', '/img/user_foto/user_id_2.jpg')
 
 insert into categories(id, name) values (1, 'Smartphones')
 insert into categories(id, name) values (2, 'Smart-TV')

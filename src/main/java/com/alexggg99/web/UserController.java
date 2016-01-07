@@ -11,7 +11,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * Created by alexggg99 on 30.12.15.
@@ -34,6 +36,12 @@ public class UserController {
             return new ResponseEntity<User>(user, HttpStatus.OK);
         }
         return new ResponseEntity<User>(HttpStatus.NOT_FOUND);
+    }
+
+    @RequestMapping(method = RequestMethod.POST)
+    public ResponseEntity<User> saveUser(@RequestBody User user){
+        userRepository.save(user);
+        return new ResponseEntity<User>(user, HttpStatus.OK);
     }
 
 }

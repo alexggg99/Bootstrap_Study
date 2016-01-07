@@ -13,6 +13,14 @@ app.service('userService', function($http, $q) {
         })
     }
 
+    self.saveUser = function(user, callback){
+        $http.post('/user', user).then(function(res){
+            callback(res);
+        }, function(res){
+            callback(res);
+        })
+    }
+
     self.check = function(callback){
         $http.get("/auth/check").then(function(res){
             callback(res.data);

@@ -6,8 +6,8 @@ app.service('productsService', function($http, $q) {
 
     var deferObject,
     myMethods = {
-        savePage: function(page){
-            var promise = $http.post('cms_app/savePage/', page),
+        buyProduct: function(product){
+            var promise = $http.post('product/buy', product),
                 deferObject  =  deferObject || $q.defer();
 
             promise.then(
