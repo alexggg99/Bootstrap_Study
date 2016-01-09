@@ -1,6 +1,10 @@
 @import url("//fonts.googleapis.com/css?fsmily");
 
-.section-title{
+body {
+    margin-top: 50px;
+}
+
+.section-title, .navbar-brand{
     font-family: 'Lobster', cursive;
     font-weight: bold;
     line-height: 1.1;
@@ -28,6 +32,6 @@
 }
 
 .thumbnail{
-    margin-right: 10px;
+    margin-bottom: 10px;
     max-height: 200px;
 }
