@@ -31,6 +31,79 @@ public class IndexController {
         return "typography";
     }
 
+    @RequestMapping(value = "/json/genras.json")
+    @ResponseBody
+    public String getGenres(){
+            return "[\n" +
+                    "  {\n" +
+                    "    \"id\": 28,\n" +
+                    "    \"name\": \"Action\",\n" +
+                    "    \"total\": 11\n" +
+                    "  },\n" +
+                    "  {\n" +
+                    "    \"id\": 12,\n" +
+                    "    \"name\": \"Adventure\",\n" +
+                    "    \"total\": 8\n" +
+                    "  },\n" +
+                    "  {\n" +
+                    "    \"id\": 35,\n" +
+                    "    \"name\": \"Comedy\",\n" +
+                    "    \"total\": 10\n" +
+                    "  },\n" +
+                    "  {\n" +
+                    "    \"id\": 80,\n" +
+                    "    \"name\": \"Crime\",\n" +
+                    "    \"total\": 6\n" +
+                    "  },\n" +
+                    "  {\n" +
+                    "    \"id\": 18,\n" +
+                    "    \"name\": \"Drama\",\n" +
+                    "    \"total\": 16\n" +
+                    "  },\n" +
+                    "  {\n" +
+                    "    \"id\": 10751,\n" +
+                    "    \"name\": \"Family\",\n" +
+                    "    \"total\": 3\n" +
+                    "  },\n" +
+                    "  {\n" +
+                    "    \"id\": 14,\n" +
+                    "    \"name\": \"Fantasy\",\n" +
+                    "    \"total\": 5\n" +
+                    "  },\n" +
+                    "  {\n" +
+                    "    \"id\": 27,\n" +
+                    "    \"name\": \"Horror\",\n" +
+                    "    \"total\": 29\n" +
+                    "  },\n" +
+                    "  {\n" +
+                    "    \"id\": 9648,\n" +
+                    "    \"name\": \"Mystery\",\n" +
+                    "    \"total\": 5\n" +
+                    "  },\n" +
+                    "  {\n" +
+                    "    \"id\": 10749,\n" +
+                    "    \"name\": \"Romance\",\n" +
+                    "    \"total\": 4\n" +
+                    "  },\n" +
+                    "  {\n" +
+                    "    \"id\": 878,\n" +
+                    "    \"name\": \"Science Fiction\",\n" +
+                    "    \"total\": 23\n" +
+                    "  },\n" +
+                    "  {\n" +
+                    "    \"id\": 53,\n" +
+                    "    \"name\": \"Thriller\",\n" +
+                    "    \"total\": 9\n" +
+                    "  },\n" +
+                    "  {\n" +
+                    "    \"id\": 37,\n" +
+                    "    \"name\": \"Western\",\n" +
+                    "    \"total\": 4\n" +
+                    "  }\n" +
+                    "]";
+    }
+
+
     @RequestMapping("/json/movies.json")
     @ResponseBody
     public String json(){

@@ -3,7 +3,11 @@
 // */
 
 var app = angular.module('movieDB',
-    ['ngRoute', 'movieDB.controllers', 'movieDB.paginate-filter', 'movieDB.movie']);
+    ['ngRoute',
+        'movieDB.controllers',
+        'movieDB.paginate-filter',
+        'movieDB.movie',
+        'movieDB.movie-service']);
 
 //Define Routing for app
 app.config(['$routeProvider', function ($routeProvider) {
@@ -17,6 +21,11 @@ app.config(['$routeProvider', function ($routeProvider) {
         {
             templateUrl:"/views/movie.html",
             controller: "movieCtrl"
+        })
+        .when("/genre/:genreName",
+        {
+            templateUrl:"/views/catalog.html",
+            controller: "gendeCtrl"
         })
         .otherwise({redirectTo: "/"})
 }]);
