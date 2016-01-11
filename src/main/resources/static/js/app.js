@@ -11,18 +11,6 @@ app.config(function($httpProvider, $routeProvider, $locationProvider) {
                 templateUrl: 'view',
                 controller: 'IndexController'
             }).
-            when('/product/:productId', {
-                templateUrl: 'product/view',
-                controller: 'productController'
-            }).
-            when('/profile', {
-                templateUrl: 'profile/view',
-                controller: 'profileController'
-            }).
-            when('/contact', {
-                templateUrl: 'contact/view',
-                controller: 'contactController'
-            }).
             otherwise({
                 redirectTo: '/'
             });
