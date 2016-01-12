@@ -29,7 +29,7 @@
 
     <section id="products">
         <div class="row">
-            <div class="col-md-4" ng-repeat="product in products">
+            <div class="col-md-4" ng-repeat="product in products | filterByCategory: category">
                 <div class="thumbnail">
                     <img ng-src="{{product.imageURL}}"/>
                     <div class="caption">
@@ -46,8 +46,11 @@
                         </p>
                     </div>
                 </div>
+                {{product}}
             </div>
         </div>
     </section>
+
+    {{category}}
 
 </div> <!-- /container -->

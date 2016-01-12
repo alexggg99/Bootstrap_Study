@@ -3,13 +3,17 @@
  */
 
 
-app.controller('MenuController', function($scope, categoryService, authService, userService, $route, $routeParams, $location) {
+app.controller('MenuController', function($scope, $rootScope, categoryService, authService, userService, $route, $routeParams, $location) {
 
     $scope.$route = $route;
     $scope.$location = $location;
     $scope.$routeParams = $routeParams;
 
     $scope.categories = [];
+
+    $scope.$watch('category', function (category) {
+        $rootScope.category = category;
+    });
 
     $scope.user = {
         error : true
@@ -18,11 +22,11 @@ app.controller('MenuController', function($scope, categoryService, authService, 
     $scope.init = function(){
         categoryService.getAllCategories().then(function(data){
             $scope.categories = data.data;
-        })
+        });
         userService.check(function(data){
             $scope.user = data;
         });
-    }
+    };
 
     $scope.login = function () {
         authService.login($scope.user, function (data) {
