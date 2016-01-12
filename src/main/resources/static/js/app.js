@@ -2,7 +2,7 @@
 // * Created by alexggg99 on 03.07.15.
 // */
 
-var app = angular.module('myApp', ['ngResource', 'ngRoute']);
+var app = angular.module('myApp', ['ngResource', 'ngRoute', 'ui.bootstrap']);
 
 //Define Routing for app
 app.config(function($httpProvider, $routeProvider, $locationProvider) {

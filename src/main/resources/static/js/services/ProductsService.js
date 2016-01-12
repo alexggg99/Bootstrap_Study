@@ -50,6 +50,36 @@ app.service('productsService', function($http, $q) {
                     deferObject.reject(reason);
                 });
             return deferObject.promise;
+        },
+        getNumber: function(productId){
+            var promise = $http.get("product/getNumber"),
+                deferObject  =  deferObject || $q.defer();
+
+            promise.then(
+                // OnSuccess function
+                function(answer){
+                    deferObject.resolve(answer);
+                },
+                // OnFailure function
+                function(reason){
+                    deferObject.reject(reason);
+                });
+            return deferObject.promise;
+        },
+        getProductsByPageNumber: function(pageNumber, numPerPage, categoryId){
+            var promise = $http.get("product/getAll/" + pageNumber + "/" + numPerPage+ "/" + categoryId),
+                deferObject  =  deferObject || $q.defer();
+
+            promise.then(
+                // OnSuccess function
+                function(answer){
+                    deferObject.resolve(answer);
+                },
+                // OnFailure function
+                function(reason){
+                    deferObject.reject(reason);
+                });
+            return deferObject.promise;
         }
     }
 

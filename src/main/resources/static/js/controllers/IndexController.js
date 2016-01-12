@@ -7,15 +7,34 @@ app.controller('IndexController', function($scope, $rootScope, $location, produc
 
     $scope.products = [];
 
+    $scope.currentPage = 1
+        ,$scope.numPerPage = 3
+        ,$scope.maxSize = 2;
+
+
     $rootScope.$watch('category', function (category) {
         $scope.category = category;
+        $scope.getElements(1);
     });
 
     $scope.init = function(){
-        productsService.getAllProducts().then(function(data){
-            $scope.products = data.data;
+        var category = angular.isUndefined($scope.category) ? -1 : $scope.category.id;
+        productsService.getNumber().then(function(number){
+            var pages = number.data/$scope.numPerPage
+            $scope.pagination = $scope.getPagination(Math.ceil(pages));
         });
+        productsService.getProductsByPageNumber($scope.currentPage - 1, $scope.numPerPage, category).then(function(data){
+            $scope.products = data.data.content;
+        });
+        //productsService.getAllProducts().then(function(data){
+        //    $scope.products = data.data;
+        //    $scope.pagination = $scope.getPagination($scope.products.length);
+        //});
     };
+
+    $scope.getPagination = function(length) {
+        return new Array(length);
+    }
 
     $scope.getStars = function(n){
         var i = Math.round(n);
@@ -26,7 +45,12 @@ app.controller('IndexController', function($scope, $rootScope, $location, produc
         $event.stopPropagation();
     }
 
-
+    $scope.getElements = function(pageNumber){
+        var category = angular.isUndefined($scope.category) ? -1 : $scope.category.id;
+        productsService.getProductsByPageNumber(pageNumber - 1, $scope.numPerPage, category).then(function(data){
+            $scope.products = data.data.content;
+        });
+    }
 
 });
 
