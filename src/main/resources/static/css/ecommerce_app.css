@@ -155,3 +155,7 @@ blockquote {
 .contact-css .form-control-feedback{
     width: 28px;
 }
+
+.pagination > li > a{
+    cursor: pointer;
+}

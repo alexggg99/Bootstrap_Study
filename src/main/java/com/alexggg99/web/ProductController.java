@@ -48,6 +48,17 @@ public class ProductController {
         return result.size();
     }
 
+    @RequestMapping(value = "/getNumber/{categoryId}" ,method = RequestMethod.GET)
+    public @ResponseBody Integer getNumber(@PathVariable long categoryId) {
+        List<Product> result;
+        if(categoryId != -1){
+            result = (List<Product>) productRepository.getAllElementsByCategoryId(categoryId);
+        }else{
+            result = (List<Product>) productRepository.findAll();
+        }
+        return result.size();
+    }
+
     @RequestMapping(value = "/getAll/{page}/{numPerPage}" ,method = RequestMethod.GET)
     public @ResponseBody Page<Product> getAllByPages(@PathVariable int page, @PathVariable int numPerPage) {
         Page<Product> result = productRepositoryPageable.findAll(new PageRequest(page, numPerPage));

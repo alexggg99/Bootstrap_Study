@@ -15,6 +15,11 @@ app.controller('IndexController', function($scope, $rootScope, $location, produc
     $rootScope.$watch('category', function (category) {
         $scope.category = category;
         $scope.getElements(1);
+        var category = angular.isUndefined($scope.category) || $scope.category == null ? -1 : $scope.category.id;
+        productsService.getNumberByCategory(category).then(function(number){
+            var pages = number.data/$scope.numPerPage;
+            $scope.pagination = $scope.getPagination(Math.ceil(pages));
+        });
     });
 
     $scope.init = function(){
@@ -26,10 +31,6 @@ app.controller('IndexController', function($scope, $rootScope, $location, produc
         productsService.getProductsByPageNumber($scope.currentPage - 1, $scope.numPerPage, category).then(function(data){
             $scope.products = data.data.content;
         });
-        //productsService.getAllProducts().then(function(data){
-        //    $scope.products = data.data;
-        //    $scope.pagination = $scope.getPagination($scope.products.length);
-        //});
     };
 
     $scope.getPagination = function(length) {
@@ -46,7 +47,7 @@ app.controller('IndexController', function($scope, $rootScope, $location, produc
     }
 
     $scope.getElements = function(pageNumber){
-        var category = angular.isUndefined($scope.category) ? -1 : $scope.category.id;
+        var category = angular.isUndefined($scope.category) || $scope.category == null ? -1 : $scope.category.id;
         productsService.getProductsByPageNumber(pageNumber - 1, $scope.numPerPage, category).then(function(data){
             $scope.products = data.data.content;
         });

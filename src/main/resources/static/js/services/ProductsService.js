@@ -51,8 +51,23 @@ app.service('productsService', function($http, $q) {
                 });
             return deferObject.promise;
         },
-        getNumber: function(productId){
+        getNumber: function(){
             var promise = $http.get("product/getNumber"),
+                deferObject  =  deferObject || $q.defer();
+
+            promise.then(
+                // OnSuccess function
+                function(answer){
+                    deferObject.resolve(answer);
+                },
+                // OnFailure function
+                function(reason){
+                    deferObject.reject(reason);
+                });
+            return deferObject.promise;
+        },
+        getNumberByCategory: function(categoryId){
+            var promise = $http.get("product/getNumber/" + categoryId),
                 deferObject  =  deferObject || $q.defer();
 
             promise.then(
